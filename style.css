@@ -1,0 +1,450 @@
+/* | IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* | CSS RESET  */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* | VARIABLES */
+:root {
+	/* | COLORS  */
+	--very-dark-magenta: hsl(300, 43%, 22%);
+	--soft-pink: hsl(333, 80%, 67%);
+	--dark-grayish-magenta: hsl(303, 10%, 53%);
+	--light-grayish-magenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+
+	/* | FONTS  */
+	--body-font: 400 15px 'League Spartan';
+	--small-font: 400 16px 'League Spartan';
+	--h1-font: 700 50px 'League Spartan';
+	--big-font: 400 18px 'League Spartan';
+}
+
+/* | GENERAL STYLES */
+html {
+	max-width: 1440px;
+	min-height: 800px;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding: 165px 115px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 75px;
+	font: var(--body-font);
+	color: var(--very-dark-magenta);
+	line-height: 1.5;
+}
+
+.bgi {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url(img/bg-pattern-top-desktop.svg) no-repeat top left;
+}
+
+.bgi1 {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url(img/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+}
+
+.header-article {
+	width: 415px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: left;
+	gap: 28px;
+}
+
+h1 {
+	font: var(--h1-font);
+}
+
+.header-article p {
+	font: var(--big-font);
+	color: var(--dark-grayish-magenta);
+}
+
+.ratings {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: start;
+	gap: 16px;
+}
+
+.rating {
+	padding-inline-start: 32px;
+	width: 447px;
+	height: 56px;
+	background-color: var(--light-grayish-magenta);
+	border-radius: 8px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 32px;
+	font-weight: 500;
+}
+
+.rating:nth-child(2) {
+	margin-left: 48px;
+}
+
+.rating:nth-child(3) {
+	margin-left: 96px;
+}
+
+.rate-img {
+	height: 16px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.rate-img img {
+	height: 100%;
+	width: auto;
+}
+
+.comments {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: start;
+	gap: 30px;
+}
+
+.comment {
+	padding: 32px 40px;
+	width: 350px;
+	height: 232px;
+	border-radius: 8px;
+	background-color: var(--very-dark-magenta);
+	color: var(--light-grayish-magenta);
+	font: var(--small-font);
+	display: flex;
+	flex-flow: column;
+	gap: 30px;
+}
+
+.comment:nth-child(2) {
+	margin-top: 16px;
+}
+
+.comment:nth-child(3) {
+	margin-top: 32px;
+}
+
+.avatar {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 24px;
+}
+
+.avatar-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.avatar-img img {
+	width: 100%;
+}
+
+.avatar-description {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: start;
+	gap: 4px;
+}
+
+.avatar-description p:first-child {
+	font-weight: 500;
+}
+
+.avatar-description p:last-child {
+	color: var(--soft-pink);
+}
+
+@media screen and (max-width: 1340px) {
+	.comment:nth-child(1) {
+		order: 1;
+	}
+
+	.comment:nth-child(2) {
+		margin-top: 0;
+	}
+
+	.comment:nth-child(3) {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 1240px) {
+	.rating:nth-child(2) {
+		margin-left: 0;
+	}
+
+	.rating:nth-child(3) {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--h1-font: 700 40px 'League Spartan';
+	}
+
+	body {
+		padding: 80px;
+	}
+
+	.header-article {
+		width: 330px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-font: 400 18px 'League Spartan';
+		--small-font: 400 20px 'League Spartan';
+		--h1-font: 700 50px 'League Spartan';
+		--big-font: 400 20px 'League Spartan';
+	}
+
+	/* | GENERAL STYLES */
+
+	body {
+		padding: 80px 24px 100px;
+		gap: 80px;
+	}
+
+	.header {
+		width: min-content;
+		justify-content: center;
+		gap: 50px;
+	}
+
+	.header-article {
+		width: 415px;
+		align-items: center;
+		text-align: center;
+		gap: 30px;
+	}
+
+	.ratings {
+		align-items: center;
+		gap: 30px;
+	}
+
+	.rating {
+		padding-inline-start: 0;
+		width: 450px;
+		height: 80px;
+		justify-content: center;
+		gap: 32px;
+	}
+
+	.rate-img {
+		height: 20px;
+	}
+
+	.comments {
+		gap: 30px;
+	}
+
+	.comment {
+		padding: 50px;
+		width: 400px;
+		height: 300px;
+		gap: 30px;
+	}
+
+	.comment:nth-child(1) {
+		order: 0;
+	}
+
+	.avatar {
+		justify-content: start;
+		gap: 24px;
+	}
+
+	.avatar-img {
+		width: 50px;
+		height: 50px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-font: 400 36px 'League Spartan';
+		--small-font: 400 32px 'League Spartan';
+		--h1-font: 700 80px 'League Spartan';
+		--big-font: 400 32px 'League Spartan';
+	}
+
+	/* | GENERAL STYLES */
+
+	body {
+		padding: 160px 48px 200px;
+		gap: 100px;
+	}
+
+	.bgi {
+		background-image: url(img/bg-pattern-top-mobile.svg);
+	}
+
+	.bgi1 {
+		background-image: url(img/bg-pattern-bottom-mobile.svg);
+	}
+
+	.header {
+		width: 100%;
+		justify-content: center;
+		gap: 80px;
+	}
+
+	.header-article {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+		gap: 48px;
+	}
+
+	.ratings {
+		width: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: start;
+		gap: 32px;
+	}
+
+	.rating {
+		padding-inline-start: 0;
+		width: 100%;
+		height: 160px;
+		flex-flow: column;
+		justify-content: center;
+		gap: 32px;
+	}
+
+	.rate-img {
+		height: 32px;
+		gap: 20px;
+	}
+
+	.comments {
+		align-items: center;
+		gap: 32px;
+	}
+
+	.comment {
+		padding: 80px 64px;
+		width: 100%;
+		border-radius: 20px;
+		height: 494px;
+		gap: 60px;
+	}
+
+	.avatar {
+		gap: 44px;
+	}
+
+	.avatar-img {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--body-font: 400 18px 'League Spartan';
+		--small-font: 400 16px 'League Spartan';
+		--h1-font: 700 40px 'League Spartan';
+		--big-font: 400 16px 'League Spartan';
+	}
+
+	/* | GENERAL STYLES */
+
+	body {
+		padding: 80px 24px 100px;
+		gap: 50px;
+	}
+
+	.header {
+		gap: 40px;
+	}
+
+	.header-article {
+		gap: 24px;
+	}
+
+	.ratings {
+		gap: 16px;
+	}
+
+	.rating {
+		height: 80px;
+		gap: 16px;
+	}
+
+	.rate-img {
+		height: 16px;
+		gap: 10px;
+	}
+
+	.comments {
+		gap: 16px;
+	}
+
+	.comment {
+		padding: 40px 32px;
+		height: 247px;
+		border-radius: 8px;
+		gap: 30px;
+	}
+
+	.avatar {
+		gap: 22px;
+	}
+
+	.avatar-img {
+		width: 40px;
+		height: 40px;
+	}
+}
